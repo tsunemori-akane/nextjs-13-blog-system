@@ -29,13 +29,13 @@ constructor /* * Object是实例，实例没有constructor，会从原型上寻�
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://tsunemori-akane.github.io/note/js_fundamentals/prototype/" /><meta property="article:section" content="note" />
 
-<meta property="og:site_name" content="Goldydocs" />
+<meta property="article:modified_time" content="2022-11-25T16:02:24+08:00" /><meta property="og:site_name" content="Goldydocs" />
 
 <meta itemprop="name" content="原型与原型链">
 <meta itemprop="description" content="什么是原型 一个对象，构造函数上的属性
 什么是原型链 Professor.prototype.tSkill = &#39;JAVA&#39;; function Professor(){} var professor = new Professor(); // 原型链继承 Teacher.prototype = professor; function Teacher(){ this.mSkill = &#39;JS/JQ&#39;; } var teacher = new Teacher(); Student.prototype = teacher; function Student(){ this.pSkill = &#39;HTML/CSS&#39;; } var student = new Student(); console.log(student); student.mSkill;	// JS/JQ student.tSkill;	// JAVA // 我没有的属性，可以到我的原型上找，我的原型上没有，再去上一层原型找，这种继承关系叫原型链 原型链的顶端 Object.prototype
 constructor /* * Object是实例，实例没有constructor，会从原型上寻找，即Function.prototype.constructor * Object 是new Function()构建出来的 */ Object.constructor === Function === Function.prototype.constructor; Object.__proto__ === Function.">
-
+<meta itemprop="dateModified" content="2022-11-25T16:02:24+08:00" />
 <meta itemprop="wordCount" content="231">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="原型与原型链"/>
@@ -117,8 +117,16 @@ if (!doNotTrack) {
   <input type="checkbox" id="m-notejs_fundamentalsprototype-check" checked/>
   <label for="m-notejs_fundamentalsprototype-check"><a href="/note/js_fundamentals/prototype/" class="align-left pl-0  active td-sidebar-link td-sidebar-link__page" id="m-notejs_fundamentalsprototype"><span class="td-sidebar-nav-active-item">原型与原型链</span></a></label>
   
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-notejs_fundamentalsregularexpression-li">
+  <input type="checkbox" id="m-notejs_fundamentalsregularexpression-check"/>
+  <label for="m-notejs_fundamentalsregularexpression-check"><a href="/note/js_fundamentals/regularexpression/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-notejs_fundamentalsregularexpression"><span class="">正则表达式</span></a></label>
+  
 </li>
   </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-notecss-li">
+  <input type="checkbox" id="m-notecss-check"/>
+  <label for="m-notecss-check"><a href="/note/css/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-notecss"><span class="">CSS</span></a></label>
+  
 </li>
   </ul>
 </li>
@@ -416,7 +424,10 @@ if (!doNotTrack) {
 		<br />
 	
 	
-	
+	<div class="text-muted mt-5 pt-3 border-top">
+  Last modified November 25, 2022: <a href="https://github.com/google/docsy-example/commit/e2cf5517ab75345411b8310bf4e67c6ec260f0ab">prototype note (e2cf551)</a>
+</div>
+
 </div>
 
 

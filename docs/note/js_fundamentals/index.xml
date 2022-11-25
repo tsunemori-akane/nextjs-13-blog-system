@@ -312,5 +312,86 @@
       </description>
     </item>
     
+    <item>
+      <title>Note: 正则表达式</title>
+      <link>http://tsunemori-akane.github.io/note/js_fundamentals/regularexpression/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://tsunemori-akane.github.io/note/js_fundamentals/regularexpression/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;history-of-regular-expression&#34;&gt;History of Regular Expression&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;concept developed in 1950 by mathematician Stephen Keene&lt;/li&gt;
+&lt;li&gt;Became regularly used by Unix text processing utilities.&lt;/li&gt;
+&lt;li&gt;Many different variations became standardized by the POSIX standard&lt;/li&gt;
+&lt;li&gt;A version of regular expressions was used in Perl in the 1980s.&lt;/li&gt;
+&lt;li&gt;In 1997 Philip Hazel developed PCRE for use in many modern tools&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;create-a-regex-in-js&#34;&gt;create a RegEx in JS&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;let regex1 = new RegExp(’hello’)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;let regex2 = /world/&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;about-methods&#34;&gt;About Methods&lt;/h2&gt;
+&lt;h3 id=&#34;regexp-methods&#34;&gt;RegExp Methods&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;test: returns true if pattern is found in the passsed string; false if not&lt;/li&gt;
+&lt;li&gt;exec: returns an array of matches&lt;/li&gt;
+&lt;li&gt;toString: returns a string of the regular expressions syntax&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;string-methods&#34;&gt;String Methods&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;match: returns an array of matches just like exec on RegExp.&lt;/li&gt;
+&lt;li&gt;search: returns an index of the matched string&lt;/li&gt;
+&lt;li&gt;replace: replaces matches with string&lt;/li&gt;
+&lt;li&gt;split: splits a string into an array. The division is based on the regular expression pattern&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;regular-expression-flags&#34;&gt;Regular Expression Flags&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/pattern/flags&lt;/code&gt; or &lt;code&gt;new RegExp(”pattern”, “flags”)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;g&lt;/code&gt;  match more than one occurance&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;i&lt;/code&gt;  insensitive match&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;m&lt;/code&gt; multi-line match&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;that-metacharacters&#34;&gt;That Metacharacters&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;wildcard .&lt;/code&gt;  It represents any single character&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;escaped character \&lt;/code&gt; It mathces a “.” character&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hyphen -&lt;/code&gt; like 0-9 or a-z&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;square brace []&lt;/code&gt; range&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;+&lt;/code&gt;  Matches one or more occurrences&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;?&lt;/code&gt;  Matches zero or one occurrences&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;*&lt;/code&gt;. Matches zero or more occurrences&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;{min,}&lt;/code&gt;  &lt;code&gt;{min, max}&lt;/code&gt;  &lt;code&gt;{min}&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\b&lt;/code&gt; Word boundary-Pattern bounded by a non-word character&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\B&lt;/code&gt; Nonword boundary-Pattern bounded by a word character&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;character-set-shorthand&#34;&gt;Character Set Shorthand&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;\d [0-9]&lt;/code&gt;  &lt;code&gt;\D [^0-9]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\w [a-zA-Z0-9_]&lt;/code&gt;  &lt;code&gt;\W [^a-zA-Z0-9_]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\s [\t\r\n]&lt;/code&gt;  &lt;code&gt;\S [^\t\r\n]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;groupback-reference&#34;&gt;Groupback reference&lt;/h2&gt;
+&lt;!-- &lt;tabel&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt; --&gt;
+&lt;p&gt;&lt;img src=&#34;http://tsunemori-akane.github.io/note/images/js_fundamental/gr_1.png&#34; alt=&#34;gr_1.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tsunemori-akane.github.io/note/images/js_fundamental/gr_2.png&#34; alt=&#34;gr_2.png&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;non capture group 使用 &lt;code&gt;?:&lt;/code&gt; 比如 &lt;code&gt;(?:\w+)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;http://tsunemori-akane.github.io/note/images/js_fundamental/gr_3.png&#34;/&gt;
+&lt;img src=&#34;http://tsunemori-akane.github.io/note/images/js_fundamental/gr_4.png&#34;/&gt;
+&lt;h2 id=&#34;unicode-character&#34;&gt;unicode character&lt;/h2&gt;
+
+      </description>
+    </item>
+    
   </channel>
 </rss>
