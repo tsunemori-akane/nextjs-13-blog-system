@@ -1,6 +1,7 @@
 baseURL = "http://tsunemori-akane.github.io/"
 title = "Goldydocs"
 theme = ["docsy"]
+publishDir = "docs"
 # Language settings
 contentDir = "content/en"
 defaultContentLanguage = "en"
