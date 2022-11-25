@@ -121,6 +121,10 @@ if (!doNotTrack) {
   <input type="checkbox" id="m-notejs_fundamentalsclosure-check" checked/>
   <label for="m-notejs_fundamentalsclosure-check"><a href="/note/js_fundamentals/closure/" class="align-left pl-0  active td-sidebar-link td-sidebar-link__page" id="m-notejs_fundamentalsclosure"><span class="td-sidebar-nav-active-item">函数闭包与回调</span></a></label>
   
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-notejs_fundamentalsprototype-li">
+  <input type="checkbox" id="m-notejs_fundamentalsprototype-check"/>
+  <label for="m-notejs_fundamentalsprototype-check"><a href="/note/js_fundamentals/prototype/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-notejs_fundamentalsprototype"><span class="">原型与原型链</span></a></label>
+  
 </li>
   </ul>
 </li>
@@ -254,6 +258,7 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">compute</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000">type</span><span style="color:#000;font-weight:bold">](</span><span style="color:#000">a</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">b</span><span style="color:#000;font-weight:bold">);</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
 </span></span></code></pre></div><h2 id="闭包的好处">闭包的好处</h2>
+<p><code>heavyDuty</code> 每调用一次就会打印一次, <code>getHeavyDuty</code> 只会调用一次</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">heavyDuty</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">item</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">const</span> <span style="color:#000">bigArray</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#204a87">Array</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">7000</span><span style="color:#000;font-weight:bold">).</span><span style="color:#000">fill</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;😄&#39;</span><span style="color:#000;font-weight:bold">)</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#000">console</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">log</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;created!&#39;</span><span style="color:#000;font-weight:bold">);</span>
@@ -276,8 +281,7 @@ if (!doNotTrack) {
 </span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">bigArray</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000">item</span><span style="color:#000;font-weight:bold">]</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
-</span></span></code></pre></div><p><code>heavyDuty</code> 每调用一次就会打印一次, <code>getHeavyDuty</code> 只会调用一次</p>
-<h2 id="闭包模拟私有化encapsulation">闭包模拟私有化(encapsulation)</h2>
+</span></span></code></pre></div><h2 id="闭包模拟私有化encapsulation">闭包模拟私有化(encapsulation)</h2>
 <ul>
 <li>两种写法(仅仅对外暴露出方法，外部无法访问其变量)</li>
 </ul>

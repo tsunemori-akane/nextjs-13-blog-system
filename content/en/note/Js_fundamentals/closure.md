@@ -2,7 +2,7 @@
 title: "函数闭包与回调"
 # date: 2020-04-24T16:40:00+01:00
 type: docs
-weight: 10
+weight: 1
 # description: Resources typically useful in the later stages of development
 # aliases: ["/docs/community/"] 
 # tags:
@@ -51,7 +51,7 @@ function compute(type, a, b) {
 ```
 
 ## 闭包的好处
-
+`heavyDuty` 每调用一次就会打印一次, `getHeavyDuty` 只会调用一次
 ```javascript
 function heavyDuty(item) {
   const bigArray = new Array(7000).fill('😄')
@@ -77,7 +77,6 @@ function heavyDuty2() {
 }
 ```
 
-`heavyDuty` 每调用一次就会打印一次, `getHeavyDuty` 只会调用一次
 
 ## 闭包模拟私有化(encapsulation)
 
