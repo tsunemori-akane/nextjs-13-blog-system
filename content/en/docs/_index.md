@@ -3,6 +3,7 @@
 title: "Documentation"
 linkTitle: "Documentation"
 weight: 20
+draft: true
 menu:
   main:
     weight: 20
