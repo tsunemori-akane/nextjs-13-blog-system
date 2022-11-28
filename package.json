@@ -10,7 +10,7 @@
     "webpack": "webpack",
     "webpack-watch": "webpack --watch",
     "webpack-dev-server": "webpack-dev-server",
-    "dev": "npm-run-all webpack-dev-server  hugo-server"
+    "dev": "npm-run-all webpack-dev-server hugo-server"
   },
   "repository": {
     "type": "git",
