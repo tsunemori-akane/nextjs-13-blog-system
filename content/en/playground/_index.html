@@ -1,0 +1,24 @@
+---
+title: Play
+linkTitle: Playground
+menu:
+  main:
+    weight: 2
+
+---
+<!-- <head>
+  <base href="/">
+   root/static/css
+  <link rel="stylesheet" href="css/snake.css">
+</head> -->
+  
+{{< blocks/section height="full" color="dark" >}}
+  {{ $jsbundle := "http://localhost:1314/js/bundle.js" }}
+  {{ if not .Site.IsServer}}
+  {{ $jsbundle := (index .Site.Data.manifest "main.js") }}
+  {{ end }}
+  <div id="root"></div>
+  <!-- {{ $jsbundle := (index .Site.Data.manifest "main.js") }}
+  <script src="{{ $jsbundle }}" type="module"></script> -->
+  <!-- <script src="/js/main.d4c520b6.js" type="module"></script> -->
+{{< /blocks/section >}}

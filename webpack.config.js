@@ -10,7 +10,7 @@ module.exports = {
   entry: path.resolve(__dirname, "src/index.js"),
   output: {
     path: path.resolve(__dirname, "static/"),
-    filename: `js/${isProduction ? "[fullhash]." : ""}bundle.js`,
+    filename: "js/[name].[contenthash:8].js",
     publicPath: "/",
   },
   plugins: [
@@ -23,6 +23,8 @@ module.exports = {
   ],
   devServer: {
     port: 1314,
+    hot: true,
+    compress: true,
     headers: {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
