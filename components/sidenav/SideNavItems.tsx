@@ -4,10 +4,11 @@ import React, { useState } from 'react';
 import { cn } from '#/lib/utils';
 import { useRouter } from 'next/router';
 import useMenuContext from '../../utils/menu-context';
+import { usePathname } from 'next/navigation';
 
 function Dropdownbar({name, open}) {
   return (
-    <div className='mt-5 flex'>
+    <button className='mt-5 flex'>
       <span 
         className={cn(
           'flex justify-center items-center',
@@ -16,18 +17,22 @@ function Dropdownbar({name, open}) {
       >
         {name}
       </span>
-    </div>
+    </button>
   )
 }
 
 function Dropdownlistitem({route, name}) {
+  const pathname = usePathname()
   return (
     <div className={cn(
-      'flex items-center mb-4',
-      'before:content-[""] before:block before:w-1 before:h-1 before:mr-4 before:rounded-full before:bg-[#666] last:mb-0'
+      'flex items-center mb-1 rounded-md py-2',
+      'before:content-[""] before:block before:w-1 before:h-1 before:mr-4 before:rounded-full before:bg-[#666] last:mb-0',
+      {
+        "bg-slate-200": pathname === route
+      }
       )}
     >
-      <a classname='no-underline text-base' href={route}>{name}</a>
+      <a className='no-underline text-base' href={route}>{name}</a>
     </div>
   )
 }

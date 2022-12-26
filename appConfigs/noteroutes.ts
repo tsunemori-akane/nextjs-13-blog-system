@@ -1,19 +1,7 @@
-export type Item = {
-  name: string;
-  slug: string;
-  route: string;
-  description?: string;
-}
-
-export const NoteRoutes: { name: string; items: Item[] }[] = [
+export const NoteRoutes = [
   {
     name: "JS Fundamentals",
     children: [
-      {
-        name: "components",
-        route: "/docs/fundamental/components",
-        description: ""
-      },
       {
         name: "函数闭包",
         route: "/docs/fundamental/closure",

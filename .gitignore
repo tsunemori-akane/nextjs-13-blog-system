@@ -4,3 +4,8 @@ package-lock.json
 next-env.d.ts
 
 .vscode
+.contentlayer
+
+.DS_Store
+**/.DS_Store
+.DS_Store?
