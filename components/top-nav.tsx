@@ -18,6 +18,7 @@ export function MainNav({ items }) {
         items?.map(item => {
           return (
             <Link 
+            key={item.name}
             className={cn(
               item.route.startsWith(`/${segment}`) ? 'text-white font-bold' : 'text-slate-200'
             )}

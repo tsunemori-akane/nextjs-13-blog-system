@@ -1,6 +1,7 @@
 export const NoteRoutes = [
   {
     name: "JS Fundamentals",
+    prefix: "/docs/fundamental",
     children: [
       {
         name: "函数闭包",
@@ -21,6 +22,7 @@ export const NoteRoutes = [
   },
   {
     name: "React",
+    prefix: "/docs/react",
     children: [
       {
         name: "react-router-dom",
