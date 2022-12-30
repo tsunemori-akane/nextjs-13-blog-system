@@ -12,7 +12,7 @@ function Dropdownbar({name, open, onPress}) {
 
   return (
     <button 
-      className='mt-5 flex' 
+      className='mt-5 flex w-full' 
       onClick={onPress}
     >
       <span 
@@ -28,7 +28,7 @@ function Dropdownbar({name, open, onPress}) {
   )
 }
 
-function Dropdownlistitem({route, name}) {
+function Dropdownlistitem({route, name, disabled}) {
   const pathname = usePathname()
   return (
     <div className={cn(
@@ -39,7 +39,12 @@ function Dropdownlistitem({route, name}) {
       }
       )}
     >
-      <a className='no-underline text-base' href={route}>{name}</a>
+      <a 
+        className={cn(
+          'no-underline text-base w-full hover:underline',
+          disabled && 'cursor-not-allowed opacity-40' 
+        )} 
+        href={disabled? "#" : route}>{name}</a>
     </div>
   )
 }
@@ -158,7 +163,7 @@ export function RecursiveMenu({ dir }) {
             )
           } else {
             return (
-              <Dropdownlistitem key={item.name} route={item.route} name={item.name} />
+              <Dropdownlistitem key={item.name} route={item.route} name={item.name} disabled={item.disabled} />
             )
           }
         })

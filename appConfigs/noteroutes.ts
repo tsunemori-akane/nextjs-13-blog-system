@@ -1,8 +1,13 @@
 export const NoteRoutes = [
   {
-    name: "JS Fundamentals",
+    name: "Fundamentals",
     prefix: "/docs/fundamental",
     children: [
+      {
+        name: "类型转换",
+        route: "/docs/fundamental/typeConversion",
+        description: "类型转换"
+      },
       {
         name: "函数闭包",
         route: "/docs/fundamental/closure",
@@ -21,27 +26,33 @@ export const NoteRoutes = [
     ]
   },
   {
+    name: "Css",
+    prefix: "/docs/css",
+    children: [
+      {
+        name: 'How css work',
+        route: '/docs/css/how_css_work'
+      }
+      
+    ]
+  },
+  {
     name: "React",
     prefix: "/docs/react",
     children: [
       {
-        name: "react-router-dom",
+        name: "React-router-dom",
         route: "/docs/react/react-router-dom",
         description: "路由"
       },
       {
-        name: "rn",
-        route: "/docs/react/rn",
+        name: "Fiber架构",
+        prefix: "/docs/react/fiber",
         children: [
           {
-            name: "rn-1",
-            route: "/react/rn1",
-            description: "rn1"
-          },
-          {
-            name: "rn-2",
-            route: "/react/rn2",
-            description: "rn2"
+            name: "Fiber",
+            route: "docs/react/fiber/1st",
+            disabled: true
           },
         ]
       },

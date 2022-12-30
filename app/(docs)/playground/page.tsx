@@ -1,15 +1,17 @@
+import Link from "next/link"
+
 const games = [
   {
     name: "2048",
-    route: '/2048'
+    route: '/playground/2048'
   },
   {
     name: "2048",
-    route: '/2048'
+    route: '/playground/2048'
   },
   {
     name: "2048",
-    route: '/2048'
+    route: '/playground/2048'
   },
 ]
 
@@ -26,7 +28,7 @@ export default function PlaygroundPage() {
             games.map(item => {
               return (
                 <div className="group relative rounded-lg border border-slate-200 bg-white p-6 shadow-md transition-shadow hover:shadow-lg cursor-pointer">
-                  <div>{item.name}</div>
+                  <Link href={item.route}>{item.name}</Link>
                 </div>
               )
             })
