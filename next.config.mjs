@@ -4,9 +4,9 @@ import { withContentlayer } from 'next-contentlayer';
 const nextConfig = {
   reactStrictMode: true,
   experimental: {
-    appDir: true
+    appDir: true,
   },
-  assetPrefix: './'
+  // assetPrefix: './'
 }
 
 export default withContentlayer(nextConfig);
