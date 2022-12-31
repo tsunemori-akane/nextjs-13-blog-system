@@ -6,7 +6,7 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-  distDir: 'docs'
+  //distDir: 'docs'
   // assetPrefix: './'
 }
 

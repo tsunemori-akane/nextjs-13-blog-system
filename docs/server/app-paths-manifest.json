@@ -1,6 +1,0 @@
-{
-  "/(docs)/docs/[[...slug]]/page": "app/(docs)/docs/[[...slug]]/page.js",
-  "/(home)/page": "app/(home)/page.js",
-  "/(docs)/playground/2048/page": "app/(docs)/playground/2048/page.js",
-  "/(docs)/playground/page": "app/(docs)/playground/page.js"
-}

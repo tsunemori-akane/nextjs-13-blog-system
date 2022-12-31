@@ -1,6 +1,0 @@
-{
-  "/(docs)/docs/[[...slug]]/page": "/docs/[[...slug]]",
-  "/(home)/page": "/",
-  "/(docs)/playground/2048/page": "/playground/2048",
-  "/(docs)/playground/page": "/playground"
-}
